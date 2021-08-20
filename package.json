@@ -9,10 +9,12 @@
     "lint": "eslint src --max-warnings=0",
     "test": "jest",
     "test:watch": "yarn test --watch",
-    "prepare": "husky install",
+    "test:ci": "jest --runInBand",
+    "generate": "yarn plop --plopfile generators/plopfile.js",
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook -s ./public",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*": [
@@ -52,6 +54,7 @@
     "jest": "^27.0.6",
     "jest-styled-components": "^7.0.5",
     "lint-staged": "^11.1.2",
+    "plop": "^2.7.4",
     "prettier": "2.3.2",
     "typescript": "^4.3.5"
   }
